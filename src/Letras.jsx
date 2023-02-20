@@ -1,7 +1,9 @@
-export default function Caixas(props){
+import alfabetomaiusculo from "./alfabetomaiusculo"
+
+export default function Caixas(){
     return(
         <div>
-            {props.map((i) => (<button className="caixaletras">{i}</button>))}
+            {alfabetomaiusculo.map((i) => (<button className="caixaletras">{i}</button>))}
         </div>
     )
 }
