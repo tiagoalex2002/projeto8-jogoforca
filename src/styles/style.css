@@ -50,6 +50,7 @@
     background: #9FAAB5;
     border: 1px solid #7AA7C7;
     border-radius: 3px;
+    margin-left: 12px;
     
 }
 
@@ -74,11 +75,12 @@
 
 .containerletra{
     height: 92px;
-    width: 572px;
-    justify-content: space-between;
+    width: 676px;
+    
     margin-top: 70.33px;
     margin-left: 211px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: red;
 }

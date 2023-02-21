@@ -5,7 +5,7 @@ import { useState } from "react"
 
 export default function Caixas(){
     const [desabilitado, setDesabilitado] = useState(true)
-    const [classebotao, setClassebotao] = useState(".desabilitado")
+    const [classebotao, setClassebotao] = useState("desabilitado")
 
     function Clique(){
         setDesabilitado(false)

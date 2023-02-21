@@ -12,6 +12,7 @@ export default function Estrutura(){
       }
       
     function EscolherPalavra(){
+       
        let indice = getRandomArbitrary(0, palavras.length);
        let palavra= palavras[indice]
        let tam = palavra.length
