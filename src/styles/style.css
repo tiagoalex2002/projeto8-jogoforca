@@ -35,7 +35,7 @@
     margin-top: 89px;
 }
 
-.desabilitado{
+.desabilitado button{
     width: 40px;
     height: 40px;
     font-family: 'Roboto';
@@ -50,11 +50,10 @@
     background: #9FAAB5;
     border: 1px solid #7AA7C7;
     border-radius: 3px;
-    padding-left: 11px;
-    padding-right: 11px;
+    
 }
 
-.habilitado{
+.habilitado button{
     width: 40px;
     height: 40px;
     font-family: 'Roboto';
@@ -69,8 +68,7 @@
     background: #E1ECF4;
     border: 1px solid #7AA7C7;
     border-radius: 3px;
-    padding-left: 11px;
-    padding-right: 11px;
+    
 }
 
 
@@ -80,4 +78,7 @@
     justify-content: space-between;
     margin-top: 70.33px;
     margin-left: 211px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
