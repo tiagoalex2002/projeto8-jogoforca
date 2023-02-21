@@ -1,12 +1,7 @@
-import "style"
+
 import palavras from "./palavras"
-import imagem0 from "./assets/forca0.png"
-import imagem1 from "./assets/forca1.png"
-import imagem2 from "./assets/forca2.png"
-import imagem3 from "./assets/forca3.png"
-import imagem4 from "./assets/forca4.png"
-import imagem5 from "./assets/forca5.png"
-import imagem6 from "./assets/forca6.png"
+import forca from "./forca";
+
 
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
@@ -19,10 +14,11 @@ function EscolherPalavra(){
 
 }
 
-export default function Estrutura(){
+export default function Estrutura({imagem,setImagem}){
+    
     return (
         <div className="container">
-            <img src={imagem0}/>
+            <img src={imagem}/>
             <button onClick={EscolherPalavra}>Escolher Palavra</button>
         </div>
     )

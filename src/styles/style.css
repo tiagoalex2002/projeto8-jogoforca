@@ -1,7 +1,13 @@
-.container{
+.containerinicial {
     background: #FFFFFF;
+    width: 1025px;
+    height: 839px
+}
+
+.container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
 }
 
 .container img{
@@ -29,7 +35,7 @@
     margin-top: 89px;
 }
 
-.caixaletra :disabled{
+.desabilitado{
     width: 40px;
     height: 40px;
     font-family: 'Roboto';
@@ -44,9 +50,11 @@
     background: #9FAAB5;
     border: 1px solid #7AA7C7;
     border-radius: 3px;
+    padding-left: 11px;
+    padding-right: 11px;
 }
 
-.caixaletra :enabled {
+.habilitado{
     width: 40px;
     height: 40px;
     font-family: 'Roboto';
@@ -61,4 +69,15 @@
     background: #E1ECF4;
     border: 1px solid #7AA7C7;
     border-radius: 3px;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+
+.containerletra{
+    height: 92px;
+    width: 572px;
+    justify-content: space-between;
+    margin-top: 70.33px;
+    margin-left: 211px;
 }
