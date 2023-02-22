@@ -35,7 +35,7 @@
     margin-top: 89px;
 }
 
-.desabilitado button{
+.desabilitado {
     width: 40px;
     height: 40px;
     font-family: 'Roboto';
@@ -54,7 +54,7 @@
     
 }
 
-.habilitado button{
+.habilitado {
     width: 40px;
     height: 40px;
     font-family: 'Roboto';
@@ -82,5 +82,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: red;
+    max-width: fit-content;
+    flex-wrap: wrap;
 }
