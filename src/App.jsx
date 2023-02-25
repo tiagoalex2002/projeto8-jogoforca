@@ -9,12 +9,13 @@ export default function App(){
     const [imagem, setImagem] = useState(forca[0])
     const [underlines, setUnderlines]= useState("")
     const [letrasSelecionadas, setLetrasSelecionadas] = useState([])
+    const [palavraEscolhida, setPalavraEscolhida]= useState([])
 
     return(
         <div className="containerinicial">
-            <Estrutura imagem={imagem} setImagem={setImagem} underlines={underlines} setUnderlines={setUnderlines} estado={desabilitado} setEstado={setDesabilitado} classe={classebotao} setClasse={setClassebotao} />
-            <Caixas estado={desabilitado} setEstado={setDesabilitado} classe={classebotao} setClasse={setClassebotao} 
-            letrasSelecionadas={letrasSelecionadas} setLetrasSelecionadas={setLetrasSelecionadas}/>
+            <Estrutura imagem={imagem} setImagem={setImagem} underlines={underlines} setUnderlines={setUnderlines} estado={desabilitado} setEstado={setDesabilitado} classe={classebotao} setClasse={setClassebotao} palavraEscolhida={palavraEscolhida} setPalavraEscolhida={setPalavraEscolhida} />
+            <Caixas desabilitado={desabilitado} setDesabilitado={setDesabilitado} classe={classebotao} setClasse={setClassebotao} 
+            letrasSelecionadas={letrasSelecionadas} setLetrasSelecionadas={setLetrasSelecionadas} palavraEscolhida={palavraEscolhida}/>
         </div>
     )
 }

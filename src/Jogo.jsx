@@ -7,8 +7,7 @@ export default function Estrutura(props){
     function getRandomArbitrary(min, max) {
         return Math.round(Math.random() * (max - min) + min);
       }
-      
-    const [palavraEscolhida, setPalavraEscolhida]= useState([])
+    
     function EscolherPalavra(){
        let indice = getRandomArbitrary(0, palavras.length);
        let palavra= palavras[indice];
@@ -24,8 +23,7 @@ export default function Estrutura(props){
        }
        {props.setUnderlines(espaco)}
        {props.setClasse("habilitado")}
-       const adicao=[...palavraEscolhida,palavraEmArray]
-       setPalavraEscolhida(adicao)
+       {props.setPalavraEscolhida(palavraEmArray)}
        console.log(palavraEmArray)
 
     }
