@@ -4,17 +4,19 @@ import palavras from "./palavras"
 export default function Estrutura(props){
 
     function getRandomArbitrary(min, max) {
-        return Math.random() * (max - min) + min;
+        return Math.round(Math.random() * (max - min) + min);
       }
       
     function EscolherPalavra(){
        
        let indice = getRandomArbitrary(0, palavras.length);
-       let palavra= palavras[indice]
+       let palavra= palavras[indice];
        let tam = palavra.length;
        let espaco=""
-       for(let i=0; i < tam; i++){
-        espaco= espaco + "_"
+       let contador=0
+       while(contador < tam){
+        espaco= espaco + "_ ";
+        contador++;
        }
        {props.setUnderlines(espaco)}
        {props.setClasse("habilitado")}
@@ -23,7 +25,7 @@ export default function Estrutura(props){
     
     return (
         <div className="container">
-            <img src={props.imagem}/>
+            <img data-test="game-image" src={props.imagem}/>
             <div>
                <button data-test="choose-word" onClick={EscolherPalavra}>Escolher Palavra</button>
                <p data-test="word" className="">{props.underlines}</p>
