@@ -1,6 +1,5 @@
 
 import palavras from "./palavras"
-import { useState } from "react";
 
 export default function Estrutura(props){
 
@@ -16,11 +15,13 @@ export default function Estrutura(props){
        let tam = palavra.length;
        let espaco=""
        let contador=0
+       
        while(contador < tam){
         espaco= espaco + "_ ";
         palavraEmArray.push(palavra[contador])
         contador++;
        }
+       
        {props.setUnderlines(espaco)}
        {props.setClasse("habilitado")}
        {props.setEstado(false)}
@@ -31,7 +32,7 @@ export default function Estrutura(props){
     
     return (
         <div className="container">
-            <img data-test="game-image" src={props.imagem}/>
+            <img data-test="game-image" src={props.imagem} alt="forca"/>
             <div>
                <button data-test="choose-word" onClick={EscolherPalavra}>Escolher Palavra</button>
                <p data-test="word" className="">{props.underlines}</p>
