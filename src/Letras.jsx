@@ -12,7 +12,6 @@ export default function Caixas(props){
          }
          else{
             {props.setLetrasSelecionadas(novoArray)}
-            {props.setDesabilitado(true)}
          }
          console.log(novoArray)
 
@@ -31,7 +30,7 @@ export default function Caixas(props){
             {alfabetomaiusculo.map((i) => ( <button onClick={() => Clique(i)} 
                 className={`botao ${props.letrasSelecionadas.includes(i)? "desabilitado" : props.classe}`}
                 data-test="letter"
-                disabled={ props.letrasSelecionadas.includes(i)? true : props.estado}>
+                disabled={ props.letrasSelecionadas.includes(i) ? false : props.desabilitado}>
                     {i}</button>))}
         </div>
     )
