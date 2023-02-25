@@ -36,21 +36,10 @@
 }
 
 .desabilitado {
-    width: 40px;
-    height: 40px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     color: #798A9F;
     background: #9FAAB5;
     border: 1px solid #7AA7C7;
-    border-radius: 3px;
-    margin-left: 12px;
+   
     
 }
 
@@ -64,22 +53,10 @@
     line-height: 68px;
   }
 
-.habilitado {
-    width: 40px;
-    height: 40px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+ .habilitado {
     color: #39739D;
     background: #E1ECF4;
     border: 1px solid #7AA7C7;
-    border-radius: 3px;
-    margin-left: 12px;
     
 }
 
@@ -94,4 +71,19 @@
     justify-content: space-between;
     max-width: fit-content;
     flex-wrap: wrap;
+}
+
+.botao {
+    width: 40px;
+    height: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    margin-left: 12px;
 }
