@@ -22,7 +22,7 @@ export default function Caixas(props){
 
     function Organizar(prop){
         return (
-                <button onClick={() => Clique(prop.letra)} className={i=0 ? props.classe: "desabilitado"} data-test="letter" disabled={i=0 ? props.desabilitado : selecionadasletras.includes(prop.letra)}>{prop.letra}</button>
+                <button onClick={() => Clique(prop.letra)} className={i== 0 ? props.classe: "desabilitado"} data-test="letter" disabled={i== 0 ? props.desabilitado : selecionadasletras.includes(prop.letra)}>{prop.letra}</button>
         )
     }
     return(
