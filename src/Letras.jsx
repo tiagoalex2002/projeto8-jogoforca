@@ -3,13 +3,12 @@ import { useState } from "react"
 
 
 
-export default function Caixas(){
-    const [desabilitado, setDesabilitado] = useState(true)
-    const [classebotao, setClassebotao] = useState("desabilitado")
+export default function Caixas(props){
+   
 
-    function Organizar(props){
+    function Organizar(prop){
         return (
-                <button className={classebotao} data-test="letter"  disabled = {desabilitado}>{props.letra}</button>
+                <button className={props.classe} data-test="letter"  disabled = {props.estado}>{prop.letra}</button>
         )
     }
     return(

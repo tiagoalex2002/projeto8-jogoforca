@@ -54,6 +54,16 @@
     
 }
 
+.palavraescolhida {
+    width: 100%;
+    font-size: 50px;
+    line-height: 68px;
+    color: #000000;
+    letter-spacing: 20px;
+    font-family: "Noto Sans", sans-serif;
+    line-height: 68px;
+  }
+
 .habilitado {
     width: 40px;
     height: 40px;
@@ -76,7 +86,6 @@
 .containerletra{
     height: 92px;
     width: 676px;
-    
     margin-top: 70.33px;
     margin-left: 211px;
     display: flex;
