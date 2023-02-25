@@ -23,6 +23,7 @@ export default function Estrutura(props){
        }
        {props.setUnderlines(espaco)}
        {props.setClasse("habilitado")}
+       {props.setEstado(false)}
        {props.setPalavraEscolhida(palavraEmArray)}
        console.log(palavraEmArray)
 

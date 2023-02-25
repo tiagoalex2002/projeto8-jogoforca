@@ -1,19 +1,28 @@
 import alfabetomaiusculo from "./alfabetomaiusculo"
-import { useState } from "react"
 
 
 
 export default function Caixas(props){
-
-    function Clique(){
-        {props.setClasse("desabilitado")}
-        {props.setDesabilitado(false)}
+    let i=0
+    let selecionadasletras=[]
+    function Clique(index){
+         if(selecionadasletras.includes(index)){
+            i=0
+         }
+         else{
+            i=1
+            selecionadasletras.push(index)
+            {props.setLetrasSelecionadas(selecionadasletras)}
+            {props.setDesabilitado(true)}
+            
+         }
+       
     }
    
 
     function Organizar(prop){
         return (
-                <button  onClick= {Clique} className={props.classe} data-test="letter"  disabled = {props.desabilitado}>{prop.letra}</button>
+                <button onClick={() => Clique(prop.letra)} className={i=0 ? props.classe: "desabilitado"} data-test="letter" disabled={i=0 ? props.desabilitado : selecionadasletras.includes(prop.letra)}>{prop.letra}</button>
         )
     }
     return(
