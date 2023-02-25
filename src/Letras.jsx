@@ -15,6 +15,8 @@ export default function Caixas(props){
          }
          console.log(novoArray)
         }
+
+        
     return(
         <div className="containerletra">
             {alfabetomaiusculo.map((i) => ( <button onClick={() => Clique(i)} 
