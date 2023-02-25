@@ -1,4 +1,5 @@
 import alfabetomaiusculo from "./alfabetomaiusculo"
+import forca from "./forca";
 
 
 export default function Caixas(props){
@@ -14,15 +15,23 @@ export default function Caixas(props){
             {props.setDesabilitado(true)}
          }
          console.log(novoArray)
-        }
 
-        
+        if(props.palavraEscolhida.includes(indexNovo)){
+            let j=0
+        }
+        else{
+            let j=1
+            {props.setImagem(forca[j])}
+        }
+    }
+
+
     return(
         <div className="containerletra">
             {alfabetomaiusculo.map((i) => ( <button onClick={() => Clique(i)} 
                 className={`botao ${props.letrasSelecionadas.includes(i)? "desabilitado" : props.classe}`}
                 data-test="letter"
-                disabled={ props.letrasSelecionadas.includes(i)}>
+                disabled={ props.letrasSelecionadas.includes(i)? true : props.estado}>
                     {i}</button>))}
         </div>
     )
