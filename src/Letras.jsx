@@ -4,11 +4,15 @@ import { useState } from "react"
 
 
 export default function Caixas(props){
+
+    function Clique(){
+        {props.setClasse("desabilitado")}
+    }
    
 
     function Organizar(prop){
         return (
-                <button className={props.classe} data-test="letter"  disabled = {props.estado}>{prop.letra}</button>
+                <button  onClick= {Clique} className={props.classe} data-test="letter"  disabled = {props.estado}>{prop.letra}</button>
         )
     }
     return(

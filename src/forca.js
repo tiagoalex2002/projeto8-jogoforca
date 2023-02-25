@@ -6,6 +6,12 @@ import imagem4 from "./assets/forca4.png"
 import imagem5 from "./assets/forca5.png"
 import imagem6 from "./assets/forca6.png"
 
-const forca=[ imagem0, imagem1, imagem2, imagem3, imagem4, imagem5, imagem6]
+const forca=[ imagem0, 
+    imagem1, 
+    imagem2, 
+    imagem3, 
+    imagem4, 
+    imagem5, 
+    imagem6]
 
 export default forca

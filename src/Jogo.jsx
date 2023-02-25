@@ -1,5 +1,6 @@
 
 import palavras from "./palavras"
+import { useState } from "react";
 
 export default function Estrutura(props){
 
@@ -7,19 +8,25 @@ export default function Estrutura(props){
         return Math.round(Math.random() * (max - min) + min);
       }
       
+    const [palavraEscolhida, setPalavraEscolhida]= useState([])
     function EscolherPalavra(){
-       
        let indice = getRandomArbitrary(0, palavras.length);
        let palavra= palavras[indice];
+       let palavraEmArray=[]
+       console.log(palavra)
        let tam = palavra.length;
        let espaco=""
        let contador=0
        while(contador < tam){
         espaco= espaco + "_ ";
+        palavraEmArray.push(palavra[contador])
         contador++;
        }
        {props.setUnderlines(espaco)}
        {props.setClasse("habilitado")}
+       const adicao=[...palavraEscolhida,palavraEmArray]
+       setPalavraEscolhida(adicao)
+       console.log(palavraEmArray)
 
     }
     
