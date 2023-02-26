@@ -33,9 +33,9 @@ export default function Estrutura(props){
     return (
         <div className="container">
             <img data-test="game-image" src={props.imagem} alt="forca"/>
-            <div>
+            <div className="container2">
                <button data-test="choose-word" onClick={EscolherPalavra}>Escolher Palavra</button>
-               <p data-test="word" className="">{props.underlines}</p>
+               <p data-test= "word" >{props.underlines}</p>
             </div>
         </div>
     )
