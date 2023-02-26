@@ -12,7 +12,7 @@ export default function Estrutura(props){
        let palavra= palavras[indice];
        let palavraEmArray=[]
        console.log(palavra)
-       let tam = palavra.length;
+       let tam =palavra.length;
        let espaco=[]
        let contador=0
        
@@ -33,9 +33,9 @@ export default function Estrutura(props){
     return (
         <div className="container">
             <img data-test="game-image" src={props.imagem} alt="forca"/>
-            <div className="container2">
+            <div >
                <button data-test="choose-word" onClick={EscolherPalavra}>Escolher Palavra</button>
-               <p data-test= "word" >{props.underlines}</p>
+               <div data-test= "word" className={`container2${props.underlines.length === (props.letrasCorretas.length)? "green" : ""}`}>{props.underlines}</div>
             </div>
         </div>
     )

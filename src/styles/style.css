@@ -88,7 +88,7 @@
     margin-left: 12px;
 }
 
-.container2 p{
+.container2 {
     width: 500px;
     height: 68px;
     font-family: 'Noto Sans';
@@ -100,6 +100,22 @@
     align-items: center;
     text-align: center;
     color: #000000;
+    margin-top: 212px;
+    margin-left: 225px;
+}
+
+.container2green{
+    color: #27AE60;
+    width: 500px;
+    height: 68px;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 68px;
+    display: flex;
+    align-items: center;
+    text-align: center;
     margin-top: 212px;
     margin-left: 225px;
 }

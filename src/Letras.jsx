@@ -14,35 +14,42 @@ export default function Caixas(props){
             {props.setLetrasSelecionadas(novoArray)}
             {props.setDesabilitado(true)}
          }
-         console.log(novoArray)
 
         if(props.palavraEscolhida.includes(indexNovo)){
             {props.setContador(props.contador)}
             let indices=[]
+            let corretas=[]
+            {props.setLetrasCorretas([...props.letrasCorretas,indexNovo])}
+            corretas.push(indexNovo)
             let indice = props.palavraEscolhida.indexOf(indexNovo)
             indices.push(indice)
             let alteracoes = props.palavraEscolhida
             alteracoes.splice(indice,1,"-")
             let auxiliar= alteracoes.indexOf(indexNovo)
-            while(auxiliar != -1){
+            while(auxiliar !== -1){
                indices.push(auxiliar)
+               corretas.push(indexNovo)
+               {props.setLetrasCorretas([...props.letrasCorretas,indexNovo,indexNovo])}
                alteracoes.splice(auxiliar,1,"-")
                auxiliar= alteracoes.indexOf(indexNovo)
             }
             let palavraalteracao = props.underlines
-            console.log(palavraalteracao)
-            console.log(indices)
             for(let i=0; i < indices.length; i++){
                 palavraalteracao.splice(indices[i],1,indexNovo)
             }
             {props.setUnderlines(palavraalteracao)}
+            console.log(props.letrasCorretas)
+            console.log(props.underlines.length )
+            console.log(props.letrasCorretas.length )
 
         }
         else{
             let d = props.contador + 1
-            {props.setContador(props.contador + 1)};
-            {props.setImagem(forca[d])}
-            console.log(props.contador)
+            if (d <= 6){
+                {props.setContador(props.contador + 1)};
+                {props.setImagem(forca[d])}
+            }
+            
         }
     }
 
