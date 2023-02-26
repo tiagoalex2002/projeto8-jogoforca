@@ -18,6 +18,25 @@ export default function Caixas(props){
 
         if(props.palavraEscolhida.includes(indexNovo)){
             {props.setContador(props.contador)}
+            let indices=[]
+            let indice = props.palavraEscolhida.indexOf(indexNovo)
+            indices.push(indice)
+            let alteracoes = props.palavraEscolhida
+            alteracoes.splice(indice,1,"-")
+            let auxiliar= alteracoes.indexOf(indexNovo)
+            while(auxiliar != -1){
+               indices.push(auxiliar)
+               alteracoes.splice(auxiliar,1,"-")
+               auxiliar= alteracoes.indexOf(indexNovo)
+            }
+            let palavraalteracao = props.underlines
+            console.log(palavraalteracao)
+            console.log(indices)
+            for(let i=0; i < indices.length; i++){
+                palavraalteracao.splice(indices[i],1,indexNovo)
+            }
+            {props.setUnderlines(palavraalteracao)}
+
         }
         else{
             let d = props.contador + 1

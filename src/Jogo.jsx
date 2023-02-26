@@ -13,11 +13,11 @@ export default function Estrutura(props){
        let palavraEmArray=[]
        console.log(palavra)
        let tam = palavra.length;
-       let espaco=""
+       let espaco=[]
        let contador=0
        
        while(contador < tam){
-        espaco= espaco + "_ ";
+        espaco.push("_ ")
         palavraEmArray.push(palavra[contador])
         contador++;
        }

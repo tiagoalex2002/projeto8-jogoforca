@@ -18,7 +18,7 @@ export default function App(){
             <Estrutura imagem={imagem} setImagem={setImagem} underlines={underlines} setUnderlines={setUnderlines} estado={desabilitado} setEstado={setDesabilitado} classe={classebotao} setClasse={setClassebotao} palavraEscolhida={palavraEscolhida} setPalavraEscolhida={setPalavraEscolhida} />
             <Caixas desabilitado={desabilitado} setDesabilitado={setDesabilitado} classe={classebotao} setClasse={setClassebotao} 
             letrasSelecionadas={letrasSelecionadas} setLetrasSelecionadas={setLetrasSelecionadas} palavraEscolhida={palavraEscolhida} imagem={imagem} setImagem={setImagem} 
-            contador={contador} setContador={setContador}/>
+            contador={contador} setContador={setContador} underlines={underlines} setUnderlines={setUnderlines}/>
         </div>
     )
 }
