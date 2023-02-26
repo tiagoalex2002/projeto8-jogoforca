@@ -12,25 +12,27 @@ export default function Caixas(props){
          }
          else{
             {props.setLetrasSelecionadas(novoArray)}
+            {props.setDesabilitado(true)}
          }
          console.log(novoArray)
 
         if(props.palavraEscolhida.includes(indexNovo)){
-            let j=0
+            {props.setContador(props.contador)}
         }
         else{
-            let j=1
-            {props.setImagem(forca[j])}
+            let d = props.contador + 1
+            {props.setContador(props.contador + 1)};
+            {props.setImagem(forca[d])}
+            console.log(props.contador)
         }
     }
-
 
     return(
         <div className="containerletra">
             {alfabetomaiusculo.map((i) => ( <button onClick={() => Clique(i)} 
-                className={`botao ${props.letrasSelecionadas.includes(i)? "desabilitado" : props.classe}`}
+                className={`botao ${(props.letrasSelecionadas).includes(i)? "desabilitado" : props.classe}`}
                 data-test="letter"
-                disabled={ props.letrasSelecionadas.includes(i) ? false : props.desabilitado}>
+                disabled={(props.letrasSelecionadas).includes(i) || (props.letrasSelecionadas).length === 0?  props.desabilitado : false}>
                     {i}</button>))}
         </div>
     )
