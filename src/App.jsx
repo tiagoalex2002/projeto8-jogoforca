@@ -16,8 +16,8 @@ export default function App(){
 
     function Clique(index){
         let indexNovo= index.toLowerCase()
-        setLetrasSelecionadas([...letrasSelecionadas,indexNovo])
-        const novoArray= [...letrasSelecionadas,indexNovo]
+        setLetrasSelecionadas([...letrasSelecionadas,index])
+        const novoArray= [...letrasSelecionadas,index]
         console.log(novoArray)
 
         if(palavraEscolhida.includes(indexNovo)){
