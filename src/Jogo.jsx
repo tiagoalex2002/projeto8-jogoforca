@@ -11,6 +11,7 @@ export default function Estrutura(props){
     function EscolherPalavra(){
        {props.setLetrasCorretas([])}
        {props.setLetrasSelecionadas([])}
+       {props.setImagem(forca[0])}
        let indice = getRandomArbitrary(0, palavras.length);
        let palavra= palavras[indice];
        let palavraEmArray=[]
@@ -41,7 +42,7 @@ export default function Estrutura(props){
             <img data-test="game-image" src={props.imagem} alt="forca"/>
             <div >
                <button data-test="choose-word" onClick={EscolherPalavra}>Escolher Palavra</button>
-               <div data-test= "word" className={`container2${props.underlines.length === (props.letrasCorretas.length)? "green" : (props.imagem===forca[6] ? "red" : "")}`}>{props.underlines}</div>
+               <div data-test= "word" className={`container2${ props.underlines.length === (props.letrasCorretas.length)? "green" : (props.imagem===forca[6] ? "red" : "")}`}>{props.underlines}</div>
             </div>
         </div>
     )

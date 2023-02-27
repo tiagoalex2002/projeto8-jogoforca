@@ -19,6 +19,9 @@ export default function App(){
         setLetrasSelecionadas([...letrasSelecionadas,index])
         const novoArray= [...letrasSelecionadas,index]
         console.log(novoArray)
+        if((underlines.length)=== (letrasCorretas.length)){
+            setDesabilitado(true)
+        }
 
         if(palavraEscolhida.includes(indexNovo)){
             setContador(contador)
@@ -43,6 +46,7 @@ export default function App(){
                 palavraalteracao.splice(indices[i],1,indexNovo)
             }
             {setUnderlines(palavraalteracao)}
+           
             
 
         }
@@ -55,10 +59,12 @@ export default function App(){
             else if(d===6){
                 setImagem(forca[d])
                 setUnderlines(palavraerro)
+                setDesabilitado(true)
             }
             
         }
     }
+
 
 
     return(
