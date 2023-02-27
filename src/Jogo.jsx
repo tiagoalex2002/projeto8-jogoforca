@@ -12,6 +12,7 @@ export default function Estrutura(props){
        let indice = getRandomArbitrary(0, palavras.length);
        let palavra= palavras[indice];
        let palavraEmArray=[]
+       let erro=[]
        console.log(palavra)
        let tam =palavra.length;
        let espaco=[]
@@ -20,6 +21,7 @@ export default function Estrutura(props){
        while(contador < tam){
         espaco.push("_ ")
         palavraEmArray.push(palavra[contador])
+        erro.push(palavra[contador])
         contador++;
        }
        
@@ -27,6 +29,7 @@ export default function Estrutura(props){
        {props.setClasse("habilitado")}
        {props.setEstado(false)}
        {props.setPalavraEscolhida(palavraEmArray)}
+       {props.setPalavraerro(erro)}
        console.log(palavraEmArray)
 
     }
@@ -36,7 +39,7 @@ export default function Estrutura(props){
             <img data-test="game-image" src={props.imagem} alt="forca"/>
             <div >
                <button data-test="choose-word" onClick={EscolherPalavra}>Escolher Palavra</button>
-               <div data-test= "word" className={`container2${props.underlines.length === (props.letrasCorretas.length)? "green" : (props.imagem==forca[6] ? "red" : "")}`}>{props.underlines}</div>
+               <div  data-test="word" className={`container2${props.underlines.length === (props.letrasCorretas.length)? "green" : (props.imagem===forca[6] ? "red" : "")}`}>{props.underlines}</div>
             </div>
         </div>
     )

@@ -10,6 +10,7 @@ export default function App(){
     const [underlines, setUnderlines]= useState("")
     const [letrasSelecionadas, setLetrasSelecionadas] = useState([])
     const [palavraEscolhida, setPalavraEscolhida]= useState([])
+    const [palavraerro,setPalavraerro] = useState([])
     const [contador, setContador] = useState(0)
     const [letrasCorretas, setLetrasCorretas] = useState([])
 
@@ -57,9 +58,9 @@ export default function App(){
                 setContador(contador + 1)
                 setImagem(forca[d])
             }
-            else if(d==6){
+            else if(d===6){
                 setImagem(forca[d])
-                setUnderlines(palavraEscolhida)
+                setUnderlines(palavraerro)
             }
             
         }
@@ -70,7 +71,8 @@ export default function App(){
         <div className="containerinicial">
             <Estrutura imagem={imagem} setImagem={setImagem} underlines={underlines} setUnderlines={setUnderlines} estado={desabilitado} setEstado={setDesabilitado} 
             classe={classebotao} setClasse={setClassebotao} palavraEscolhida={palavraEscolhida} setPalavraEscolhida={setPalavraEscolhida}
-            letrasCorretas={letrasCorretas} setLetrasCorretas={setLetrasCorretas} />
+            letrasCorretas={letrasCorretas} setLetrasCorretas={setLetrasCorretas}
+            palavraerro={palavraerro} setPalavraerro={setPalavraerro}/>
             <Caixas desabilitado={desabilitado} setDesabilitado={setDesabilitado} classe={classebotao} setClasse={setClassebotao} 
             letrasSelecionadas={letrasSelecionadas} setLetrasSelecionadas={setLetrasSelecionadas} palavraEscolhida={palavraEscolhida} imagem={imagem} setImagem={setImagem} 
             contador={contador} setContador={setContador} underlines={underlines} setUnderlines={setUnderlines}
