@@ -6,14 +6,15 @@ export default function Caixas(props){
 
     function Clique(index){
         let indexNovo= index.toLowerCase()
-        const novoArray=[...props.letrasSelecionadas,indexNovo]
-        if(props.letrasSelecionadas.includes(indexNovo)){
-            let i=0;
-         }
-         else{
-            {props.setLetrasSelecionadas(novoArray)}
-            {props.setDesabilitado(true)}
-         }
+        {props.setLetrasSelecionadas([...props.letrasSelecionadas,indexNovo])}
+        const novoArray= [...props.letrasSelecionadas,indexNovo]
+        console.log(novoArray)
+        //if(props.letrasSelecionadas.includes(indexNovo)){
+           // let i=0;
+        // }
+         //else{
+           // {props.setLetrasSelecionadas(novoArray)}
+         //}
 
         if(props.palavraEscolhida.includes(indexNovo)){
             {props.setContador(props.contador)}
@@ -38,16 +39,18 @@ export default function Caixas(props){
                 palavraalteracao.splice(indices[i],1,indexNovo)
             }
             {props.setUnderlines(palavraalteracao)}
-            console.log(props.letrasCorretas)
-            console.log(props.underlines.length )
-            console.log(props.letrasCorretas.length )
+            
 
         }
         else{
             let d = props.contador + 1
-            if (d <= 6){
+            if (d < 6){
                 {props.setContador(props.contador + 1)};
                 {props.setImagem(forca[d])}
+            }
+            else if(d==6){
+                {props.setImagem(forca[d])}
+                {props.setUnderlines(props.palavraEscolhida)}
             }
             
         }
@@ -58,7 +61,7 @@ export default function Caixas(props){
             {alfabetomaiusculo.map((i) => ( <button onClick={() => Clique(i)} 
                 className={`botao ${(props.letrasSelecionadas).includes(i)? "desabilitado" : props.classe}`}
                 data-test="letter"
-                disabled={(props.letrasSelecionadas).includes(i) || (props.letrasSelecionadas).length === 0?  props.desabilitado : false}>
+                disabled={props.desabilitado}>
                     {i}</button>))}
         </div>
     )
