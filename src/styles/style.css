@@ -35,13 +35,6 @@
     margin-top: 89px;
 }
 
-.desabilitado {
-    color: #798A9F;
-    background: #9FAAB5;
-    border: 1px solid #7AA7C7;
-   
-    
-}
 
 .palavraescolhida {
     width: 100%;
@@ -53,12 +46,6 @@
     line-height: 68px;
   }
 
- .habilitado {
-    color: #39739D;
-    background: #E1ECF4;
-    border: 1px solid #7AA7C7;
-    
-}
 
 
 .containerletra{
@@ -73,7 +60,7 @@
     flex-wrap: wrap;
 }
 
-.botao {
+.containerletra button {
     width: 40px;
     height: 40px;
     font-family: 'Roboto';
@@ -86,6 +73,30 @@
     text-align: center;
     border-radius: 3px;
     margin-left: 12px;
+    color: #39739D;
+    background: #E1ECF4;
+    border: 1px solid #7AA7C7;
+    
+}
+
+.containerletra button:disabled {
+    width: 40px;
+    height: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    margin-left: 12px;
+    color: #798A9F;
+    background: #9FAAB5;
+    border: 1px solid #7AA7C7;
+   
+
 }
 
 .container2 {

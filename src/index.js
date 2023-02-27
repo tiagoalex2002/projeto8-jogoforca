@@ -1,7 +1,10 @@
-import  ReactDOM  from "react-dom"
+import { ReactDOM } from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import App from "./App"
 import "./styles/reset.css"
 import "./styles/style.css"
 
 
-ReactDOM.render(<App/>, document.querySelector(".root"));
+const domNode = document.querySelector(".root");
+const root = createRoot(domNode);
+root.render(<App />);
