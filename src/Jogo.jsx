@@ -9,6 +9,8 @@ export default function Estrutura(props){
       }
     
     function EscolherPalavra(){
+       {props.setLetrasCorretas([])}
+       {props.setLetrasSelecionadas([])}
        let indice = getRandomArbitrary(0, palavras.length);
        let palavra= palavras[indice];
        let palavraEmArray=[]

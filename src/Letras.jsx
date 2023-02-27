@@ -9,7 +9,7 @@ export default function Caixas(props){
             {alfabetomaiusculo.map((i) => ( <button onClick={() => props.Clique(i)} 
                 data-test="letter"
                 key={i}
-                disabled={props.desabilitado || (props.letrasSelecionadas.includes(i))}>
+                disabled={props.letrasSelecionadas.length===0 ? props.desabilitado : (props.letrasSelecionadas.includes(i))}>
                     {i}</button>))}
         </div>
     )
