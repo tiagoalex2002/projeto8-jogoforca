@@ -1,5 +1,4 @@
 import alfabetomaiusculo from "./alfabetomaiusculo"
-import forca from "./forca";
 
 
 export default function Caixas(props){

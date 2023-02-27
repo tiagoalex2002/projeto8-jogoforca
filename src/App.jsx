@@ -19,12 +19,6 @@ export default function App(){
         setLetrasSelecionadas([...letrasSelecionadas,indexNovo])
         const novoArray= [...letrasSelecionadas,indexNovo]
         console.log(novoArray)
-        //if(props.letrasSelecionadas.includes(indexNovo)){
-           // let i=0;
-        // }
-         //else{
-           // {props.setLetrasSelecionadas(novoArray)}
-         //}
 
         if(palavraEscolhida.includes(indexNovo)){
             setContador(contador)
