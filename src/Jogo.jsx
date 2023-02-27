@@ -39,7 +39,7 @@ export default function Estrutura(props){
             <img data-test="game-image" src={props.imagem} alt="forca"/>
             <div >
                <button data-test="choose-word" onClick={EscolherPalavra}>Escolher Palavra</button>
-               <div  data-test="word" className={`container2${props.underlines.length === (props.letrasCorretas.length)? "green" : (props.imagem===forca[6] ? "red" : "")}`}>{props.underlines}</div>
+               <div data-test= "word" className={`container2${props.underlines.length === (props.letrasCorretas.length)? "green" : (props.imagem===forca[6] ? "red" : "")}`}>{props.underlines}</div>
             </div>
         </div>
     )
